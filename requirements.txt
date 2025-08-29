@@ -1,0 +1,9 @@
+ultralytics
+opencv-python
+faster-whisper
+webrtcvad
+sounddevice
+numpy
+requests
+piper-tts
+onnxruntime

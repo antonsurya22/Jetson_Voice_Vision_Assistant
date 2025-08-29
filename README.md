@@ -1,5 +1,5 @@
-# ROS2-Jetson-Assistant
-ROS2 Jetson Assistant, this will turn the Jetson Orin NX as voice assistant. It listens with Whisper, speaks with Pipere, detect objects with YOLOv8, and can chat with a local LLM (Ollama)
+# Jetson Voice Vision Assistant
+Jetson Assistant, this will turn the Jetson Orin NX as voice assistant. It listens with Whisper, speaks with Pipere, detect objects with YOLOv8, and can chat with a local LLM (Ollama)
 
 ## Features 
 <ol>

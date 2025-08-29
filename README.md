@@ -168,5 +168,15 @@ curl -s http://127.0.0.1:11434/api/tags
 
 
 
+## License
+
+This repository’s code is released under the MIT License (see `LICENSE`).
+
+**Third-party components and downloaded models/voices are licensed separately.**
+Users must review and comply with the licenses of Ultralytics YOLO, Piper and its
+voices, Whisper/faster-whisper, any Ollama models, and other dependencies.
+No model/voice/weight files are included in this repo.
+
+
 
 

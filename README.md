@@ -46,6 +46,24 @@ mkdir -p voices
 2 Download both files for each voice (model `.onnx` and config `.json` from the Piper models page
   -> `rhasspy/piper-voices` on Hugging Face. Example voices:
   * English (US) Ryan : `en_US-ryan.onnx` + `zh_CN-huayan.json`
+    English
+```bash
+wget -O en_US-ryan.onnx \
+  https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/medium/en_US-ryan-medium.onnx
+wget -O en_US-ryan.json \
+  https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ryan/medium/en_US-ryan-medium.onnx.json
+cp -n en_US-ryan.json en_US-ryan.onnx.json
+```
+ Chinese
+```bash
+wget -O zh_CN-huayan.onnx \
+  https://huggingface.co/rhasspy/piper-voices/resolve/main/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx
+wget -O zh_CN-huayan.json \
+  https://huggingface.co/rhasspy/piper-voices/resolve/main/zh/zh_CN/huayan/medium/zh_CN-huayan-medium.onnx.json
+cp -n zh_CN-huayan.json zh_CN-huayan.onnx.json
+```
+    
+    
 3. Add the `.onnx.json` filename Piper expects
 ```bash
 cd voices
@@ -55,6 +73,12 @@ ls -1
 # en_US-ryan.onnx  en_US-ryan.json  en_US-ryan.onnx.json
 # zh_CN-huayan.onnx zh_CN-huayan.json zh_CN-huayan.onnx.json
 ```
+Test the voice
+```bash
+echo '{"text":"Hello from Ryan","lang":"en"}' | python3 tts_cli.py
+echo '{"text":"你好，我是华言","lang":"zh"}' | python3 tts_cli.py
+```
+
 4. Local LLM with Ollama
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
